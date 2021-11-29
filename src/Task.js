@@ -59,7 +59,6 @@ const readStoreagedTasks = () => {
 function Tasks() {
     const [taskText, setTaskText] = useState('');
     const storedTasks = readStoreagedTasks();
-
     const [state, dispatch] = useReducer(tasksReducer, storedTasks);
     const { tasks, completedTasks } = state;
 
